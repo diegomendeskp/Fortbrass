@@ -13,7 +13,8 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          FortBrass
+            <span className="fort">FORT</span>
+  <span className="brass">BRASS</span>
         </Link>
 
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
