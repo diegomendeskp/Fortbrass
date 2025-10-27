@@ -34,7 +34,7 @@ function App() {
 
       {/* Botão fixo WhatsApp */}
       <a
-        href="https://wa.me/5521995931872"
+        href="https://wa.me/5521959301720"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-btn"

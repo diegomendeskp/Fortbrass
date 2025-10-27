@@ -24,7 +24,7 @@ function Footer() {
         <div className="footer-contact">
           <h3>Contato</h3>
           <p>
-            📞 <a href="https://wa.me/5521995931872" target="_blank" rel="noopener noreferrer">
+            📞 <a href="https://wa.me/5521959301720" target="_blank" rel="noopener noreferrer">
               WhatsApp
             </a>
           </p>
