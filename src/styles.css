@@ -7,23 +7,7 @@ body {
 
 
 
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
 
-@media(max-width:768px){
-  .navbar .menu {
-    display: none;
-    flex-direction: column;
-    background: #002244;
-    position: absolute;
-    top: 60px; right: 0;
-    padding: 10px;
-  }
-  .navbar .menu.open { display: flex; }
-  .hamburger { display: block; }
-}
 
 /* Carousel */
 .carousel {
