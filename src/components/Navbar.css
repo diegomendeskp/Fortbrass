@@ -1,0 +1,98 @@
+.navbar {
+  background: #002244;
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* mantém a separação entre logo e menu */
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 🔹 Garante que o logo fique sempre à esquerda */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  margin-right: auto; /* empurra tudo à direita */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Menu hamburguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Responsivo */
+/* ✅ MENU RESPONSIVO CORRIGIDO */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #002244;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 8px 0 0 8px;
+    transform: translateX(100%); /* 🔹 Esconde o menu fora da tela inicialmente */
+    transition: transform 0.3s ease;
+    visibility: hidden; /* 🔹 Garante que não clique por engano */
+    opacity: 0;         /* 🔹 Torna invisível */
+  }
+
+  .nav-links.open {
+    transform: translateX(0); /* 🔹 Move o menu para dentro da tela */
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+/* 🔧 Evita rolagem lateral em todo o site */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}

@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #111;
+}
+
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media(max-width:768px){
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    background: #002244;
+    position: absolute;
+    top: 60px; right: 0;
+    padding: 10px;
+  }
+  .navbar .menu.open { display: flex; }
+  .hamburger { display: block; }
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity .8s ease-in-out;
+}
+.slide.active { opacity: 1; }
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  display: inline-block;
+  width: 12px; height: 12px;
+  margin: 0 5px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot.active { background: #007bff; }
+
+/* Cards */
+.courses {
+  padding: 40px;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+.card {
+   border: 2px solid transparent;
+  transition: border 0.3s ease, transform 0.3s ease;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  border: 2px solid #007bff;
+  transform: translateY(-5px);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card h3 { padding: 10px; }
+.card .btn {
+  display: block;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* WhatsApp botão fixo */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.courses-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.courses-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #002244;
+}
+
+.courses-page p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #333;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.courses-grid .card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.courses-grid .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.courses-grid .card h2 {
+  margin: 15px 0;
+  color: #002244;
+}
+
+.courses-grid .card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.courses-grid .card .btn:hover {
+  background: #0056b3;
+}
+
+/* Efeito hover */
+.courses-grid .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
